@@ -14,7 +14,7 @@ body {
     transform: translate(-50%, -50%);
   }
 
-  div.box {
+  .box {
     margin: 30px;
     background-color: #000000;
     border: 9px solid rgb(0, 0, 0);
