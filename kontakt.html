@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="ao.png" type="image/gif" sizes="16x16">
+	<script src="kontaktsubmit.js"></script>
 	<meta charset="UTF-8">
 	<title>Kontakt</title>
 	<link rel="stylesheet" type="text/css" href="stylekontakt.css">
@@ -10,11 +12,13 @@
 		<div class="contact-box">
 			<div class="right">
 				<h2>Kontaktirajte me</h2>
-				<input type="text" class="field" placeholder="Ime">
-				<input type="text" class="field" placeholder="email">
-				<input type="text" class="field" placeholder="Broj mobitela">
-				<textarea placeholder="Message" class="field"></textarea>
-				<button class="btn">Pošalji</button>
+			<form>
+				<input type="text" class="field" placeholder="Ime" id="ime">
+				<input type="text" class="field" placeholder="email" id="email">
+				<input type="text" class="field" placeholder="Broj mobitela" id="mobitel">
+				<textarea placeholder="Poruka" class="field" id="tekst"></textarea>
+				<button class="btn" id="btn">Pošalji</button>
+			</form>
 			</div>
 		</div>
 	</div>

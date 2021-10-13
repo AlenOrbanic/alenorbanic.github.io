@@ -1,0 +1,23 @@
+body {
+    background-image: url('pozadina.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Candara', serif;
+  }
+
+  .vertical-align {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .box {
+    margin: 30px;
+    background-color: #000000;
+    border: 9px solid rgb(0, 0, 0);
+    opacity: 0.9;
+  }
