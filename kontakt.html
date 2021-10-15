@@ -12,15 +12,35 @@
 		<div class="contact-box">
 			<div class="right">
 				<h2>Kontaktirajte me</h2>
-			<form>
-				<input type="text" class="field" placeholder="Ime" id="ime">
+			<form id="contact-form">
+				<input type="text" class="field" placeholder="Ime" id="ime" name="from_name">
 				<input type="text" class="field" placeholder="email" id="email">
 				<input type="text" class="field" placeholder="Broj mobitela" id="mobitel">
-				<textarea placeholder="Poruka" class="field" id="tekst"></textarea>
+				<textarea placeholder="Poruka" class="field" id="tekst" name="message"></textarea>
 				<button class="btn" id="btn">Pošalji</button>
 			</form>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+	(function() {
+	emailjs.init("user_5pVIBpVVXyQGHen2V1V2S");
+	})();
+	</script>
+	    <script type="text/javascript">
+			window.onload = function() {
+				document.getElementById('contact-form').addEventListener('btn', function(event) {
+					event.preventDefault();
+					// these IDs from the previous steps
+					emailjs.sendForm('service_0nld0wb', 'template_kk1ks6e', this)
+						.then(function() {
+							console.log('SUCCESS!');
+						}, function(error) {
+							console.log('FAILED...', error);
+						});
+				});
+			}
+		</script>
 </body>
 </html>
