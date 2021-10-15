@@ -13,6 +13,7 @@
                 event.preventDefault();
                 emailjs.sendForm('service_0nld0wb', 'template_kk1ks6e', this)
                     .then(function() {
+						alert('Poruka je uspješno poslana!');
                         console.log('SUCCESS!');
                     }, function(error) {
                         console.log('FAILED...', error);
