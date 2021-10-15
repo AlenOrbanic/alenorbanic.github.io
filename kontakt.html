@@ -23,14 +23,14 @@
 				<input type="text" class="field" placeholder="email" id="email">
 				<input type="text" class="field" placeholder="Broj mobitela" id="mobitel">
 				<textarea placeholder="Poruka" class="field" id="tekst" name="message"></textarea>
-				<button class="btn" id="btn">Pošalji</button>
+				<button class="btn" id="btn" type="submit" >Pošalji</button>
 			</form>
 			</div>
 		</div>
 	</div>
 	    <script type="text/javascript">
 			window.onload = function() {
-				document.getElementById('contact-form').addEventListener('btn', function(event) {
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
 					event.preventDefault();
 					// these IDs from the previous steps
 					emailjs.sendForm('service_0nld0wb', 'template_kk1ks6e', this)
