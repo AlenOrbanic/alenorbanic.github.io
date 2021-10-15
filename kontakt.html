@@ -7,6 +7,20 @@
 	emailjs.init("user_5pVIBpVVXyQGHen2V1V2S");
 	})();
 	</script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_0nld0wb', 'template_kk1ks6e', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
 	<link rel="icon" href="ao.png" type="image/gif" sizes="16x16">
 	<script src="kontaktsubmit.js"></script>
 	<meta charset="UTF-8">
@@ -28,19 +42,5 @@
 			</div>
 		</div>
 	</div>
-	    <script type="text/javascript">
-			window.onload = function() {
-				document.getElementById('contact-form').addEventListener('submit', function(event) {
-					event.preventDefault();
-					// these IDs from the previous steps
-					emailjs.sendForm('service_0nld0wb', 'template_kk1ks6e', this)
-						.then(function() {
-							console.log('SUCCESS!');
-						}, function(error) {
-							console.log('FAILED...', error);
-						});
-				});
-			}
-		</script>
 </body>
 </html>
